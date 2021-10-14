@@ -9,7 +9,7 @@ public class ReverseStringController {
 
     @GetMapping(value = "/rev")
     String getReverseString(@RequestParam String text) {
-        return text;
+        return new StringBuilder(text).reverse().toString();
     }
 
 }
